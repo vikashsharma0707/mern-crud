@@ -15,6 +15,9 @@ const Layout=()=>{
         <Link   to="display">Display</Link>
         <Link   to="search">Search</Link>
         <Link   to="update">Update</Link>
+        <Link   to="registration">Registration</Link>
+        <Link   to="login">Login</Link>
+        <Link   to="logout">Logout</Link>
 
         <Outlet/>
         </>

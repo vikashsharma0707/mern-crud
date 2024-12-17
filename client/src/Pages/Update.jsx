@@ -2,6 +2,9 @@ import { useState } from "react"
 import { useEffect } from "react"
 import axios from "axios"
 import { useNavigate } from "react-router-dom"
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
+import ProductDetail from "./ProductDetail";
 
 const Update=()=>{
     const [val,setval]=useState([])
@@ -31,6 +34,10 @@ const Update=()=>{
            navigate(`/edit/${id}`)
     }
 
+    const mypro=(id)=>{
+        navigate(`/product/${id}`)
+    }
+
 
     const ans = val.map((key)=>{
         return(
@@ -47,6 +54,10 @@ const Update=()=>{
                 <td>
                     <button  onClick={()=>{myedt(key._id)}}>Edit</button>
                 </td>
+
+                <td>
+                    <button  onClick={()=>{mypro(key._id)}}>Edit</button>
+                </td>
             </tr>
             </>
         )
@@ -56,6 +67,27 @@ const Update=()=>{
         
         <h1>This is update page</h1>
         {ans}
+
+
+        <div
+      className="modal show"
+      style={{ display: 'block', position: 'initial' }}
+    >
+      <Modal.Dialog>
+        <Modal.Header closeButton>
+          <Modal.Title>Modal title</Modal.Title>
+        </Modal.Header>
+
+        <Modal.Body>
+          <ProductDetail/>
+        </Modal.Body>
+
+        <Modal.Footer>
+          <Button variant="secondary">Close</Button>
+          <Button variant="primary">Save changes</Button>
+        </Modal.Footer>
+      </Modal.Dialog>
+    </div>
         </>
     )
 }

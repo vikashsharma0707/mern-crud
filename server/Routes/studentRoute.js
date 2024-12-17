@@ -13,5 +13,8 @@ route.post("/studentSearch",stuController.studentSearch)
 route.post("/studentDelete",stuController.studentDelete)
 route.post("/studentEdit",stuController.studentEdit)
 route.post("/studentUpdate",stuController.studentUpdate)
+route.post("/adminSave",stuController.adminSave)
+route.post("/adminLogin",stuController.adminLogin)
+route.post("/productDetail",stuController.productDetail)
 
 module.exports=route;

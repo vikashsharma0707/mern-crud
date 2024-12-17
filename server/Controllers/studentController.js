@@ -2,6 +2,7 @@
 
 
 const stuModel = require("../Models/StudentModel")
+const adminModel = require("../Models/adminModel")
 
 
 
@@ -61,12 +62,57 @@ const studentUpdate=async(req,res)=>{
     res.send("data added sucessfully")
 }
 
+
+const adminSave = async(req,res)=>{
+    const {user,email,password} = req.body;
+
+    const Data = await adminModel.create({
+        user:user,
+        email:email,
+        password:password
+    })
+
+    res.send(Data)
+}
+
+const adminLogin = async(req,res)=>{
+    const {email,password} = req.body;
+    const Data = await adminModel.find({email:email})
+
+    if(Data.length<1){
+        res.status(404).send("invalid data")
+    }
+
+    else{
+        if(Data[0].password!=password){
+            res.status(404).send("invalid password")
+        }
+
+
+        else{
+            res.status(200).send(Data)
+        }
+    }
+
+}
+
+
+
+const productDetail = async(req,res)=>{
+    const Data = await stuModel.findById(req.body.id)
+    res.send(Data)
+}
+
+
 module.exports= {
     stuSave,
     studentDisplay,
     studentSearch,
     studentDelete,
     studentEdit,
-    studentUpdate
+    studentUpdate,
+    adminSave,
+    adminLogin,
+    productDetail
 }
 

@@ -5,6 +5,10 @@ import Display from "./Pages/Display";
 import Search from "./Pages/Search";
 import Update from "./Pages/Update";
 import Edit from "./Pages/Edit";
+import Registration from "./Pages/Registration";
+import Login from "./Pages/Login";
+import Logout from "./Pages/Logout";
+import ProductDetail from "./Pages/ProductDetail";
 
 
 
@@ -23,6 +27,11 @@ const App=()=>{
       <Route path="search"  element={<Search/>}/>
       <Route path="update"  element={<Update/>}/>
       <Route path="edit/:stuid"  element={<Edit/>}/>
+      <Route path="registration"  element={<Registration/>}/>
+      <Route path="login"  element={<Login/>}/>
+      <Route path="logout"  element={<Logout/>}/>
+      <Route path="product/:mypro"  element={<ProductDetail/>}/>
+      
 
       </Route>
     </Routes>
