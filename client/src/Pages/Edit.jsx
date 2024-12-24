@@ -34,7 +34,7 @@ const Edit=()=>{
 
 
     const handleSubmit=()=>{
-         let api="http://localhost:8000/student/studentUpdate";
+         let api="https://mern-crud-bszv.onrender.com/student/studentUpdate";
          axios.post(api,input).then((res)=>{
           alert("data added sucessfully")
          })

@@ -11,7 +11,7 @@ const Search=()=>{
 
     
 const handleSubmit=()=>{
-    let api="http://localhost:8000/student/studentSearch";
+    let api="https://mern-crud-bszv.onrender.com/student/studentSearch";
     axios.post(api,{sturoll:sturoll}).then((res)=>{
         setval(res.data)
     })

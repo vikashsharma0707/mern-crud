@@ -22,7 +22,7 @@ const Update=()=>{
     })
 
     const mydel=(id)=>{
-        let api="http://localhost:8000/student/studentDelete"
+        let api="https://mern-crud-bszv.onrender.com/studentDelete"
         axios.post(api,{id:id}).then((res)=>{
          alert("data deleted sucessfully")
          loaddata()
