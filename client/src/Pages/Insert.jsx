@@ -14,7 +14,7 @@ const Insert=()=>{
 
 
     const handleSubmit=()=>{
-        let api="https://mern-crud-bszv.onrender.com/student/studentSave";
+        let api="https://mern-crud-2-w2q5.onrender.com/student/studentSave";
         axios.post(api,input).then(()=>{
             alert("data save")
         })

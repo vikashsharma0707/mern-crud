@@ -8,7 +8,7 @@ const Display=()=>{
     const [val,setval]=useState([])
 
     const loaddata=()=>{
-        let api="https://mern-crud-bszv.onrender.com/student/studentDisplay"
+        let api="https://mern-crud-2-w2q5.onrender.com/student/studentDisplay"
         axios.get(api).then((res)=>{
               setval(res.data)
         })
