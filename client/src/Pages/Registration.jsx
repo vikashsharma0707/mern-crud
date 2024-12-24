@@ -14,7 +14,7 @@ const Registration=()=>{
     }
 
     const handleSubmit=()=>{
-        let api="https://mern-crud-2-w2q5.onrender.com/student/adminSave";
+        let api="https://mern-izj9.onrender.com/student/adminSave";
         axios.post(api,input).then((res)=>{
               alert("data added sucessfully")
         })

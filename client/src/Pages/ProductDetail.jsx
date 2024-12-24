@@ -11,7 +11,7 @@ const ProductDetail=()=>{
     const [val,setval]=useState({})
 
     const loaddata=()=>{
-        let api="https://mern-crud-2-w2q5.onrender.com/student/productDetail"
+        let api="https://mern-izj9.onrender.com/student/productDetail"
         axios.post(api,{id:mypro}).then((res)=>{
           setval(res.data)
         })

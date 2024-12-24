@@ -15,7 +15,7 @@ const Login=()=>{
 
 
     const handleSubmit=()=>{
-        let api="https://mern-crud-2-w2q5.onrender.com/student/adminLogin";
+        let api="https://mern-izj9.onrender.com/student/adminLogin";
         axios.post(api,input).then((res)=>{
 
             if (res.status== 200){
